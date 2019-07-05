@@ -1,2 +1,2 @@
-# pingu-react-form
-React form js package
+# Pingu React Form
+React Form Provider and Handler using Yup validation.
