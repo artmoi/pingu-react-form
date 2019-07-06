@@ -1,7 +1,7 @@
 import _ from "lodash";
 import React from "react";
 import * as Yup from "yup";
-import { createDeferred } from "@artmoi/artmoi-js";
+import { createDeferred } from "./Util";
 import { UsesFormContext, ValidationErrors, FormProvider, FormContextUtilities } from "./FormContext";
 import { DataOrSetType, DataItemType, DataSetType } from "./DataType";
 import { AutoWrapper } from "auto-wrapper";

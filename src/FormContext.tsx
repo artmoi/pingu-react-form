@@ -2,7 +2,7 @@ import _ from "lodash";
 import * as Yup from "yup";
 import React from "react";
 import { DataItemType } from "./DataType";
-import { Omit } from "@artmoi/artmoi-js";
+import { Omit } from "./Util";
 
 
 export type ValidationErrors
