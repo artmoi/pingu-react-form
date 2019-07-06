@@ -1,7 +1,7 @@
 import * as Yup from "yup";
 import React from "react";
 import { DataItemType } from "./DataType";
-import { Omit } from "@artmoi/artmoi-js";
+import { Omit } from "./Util";
 export declare type ValidationErrors<OriginalData, DataItem extends DataItemType<OriginalData> = DataItemType<OriginalData>, DataItemKey extends keyof DataItem = Extract<keyof DataItem, string>> = {
     [name in DataItemKey]?: Yup.ValidationError;
 };
