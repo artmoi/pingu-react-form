@@ -56,7 +56,7 @@ export class Form<
 extends React.PureComponent<PropsType, StateType>
 implements FormContextUtilities<DataItem> {
 
-    public readonly state: StateType = null;
+    public readonly state: StateType = {} as StateType;
 
     public static defaultProps: ComponentProps<any> = {
         useFormTag: false,
