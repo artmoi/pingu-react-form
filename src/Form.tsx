@@ -100,7 +100,7 @@ implements FormContextUtilities<DataItem> {
             };
         }
 
-        return state;
+        return null;
     }
 
     private static defaultStructure() {
