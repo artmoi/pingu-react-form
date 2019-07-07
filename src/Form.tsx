@@ -56,13 +56,13 @@ export class Form<
 extends React.PureComponent<PropsType, StateType>
 implements FormContextUtilities<DataItem> {
 
-    public readonly state: StateType = {
-        collectionSchema: {} as Yup.ArraySchema<DataItemType<OriginalData>>,
-        sourceData: {} as OriginalData,
-        dataGeneration: {} as {[key: number]: number},
-        validationErrors: {} as ValidationErrors<OriginalData>,
-        editedData: [] as DataItem[],
-    }
+    // public readonly state: StateType = {
+    //     collectionSchema: {} as Yup.ArraySchema<DataItemType<OriginalData>>,
+    //     sourceData: {} as OriginalData,
+    //     dataGeneration: {} as {[key: number]: number},
+    //     validationErrors: {} as ValidationErrors<OriginalData>,
+    //     editedData: [] as DataItem[],
+    // }
 
     public static defaultProps: ComponentProps<any> = {
         useFormTag: false,
@@ -70,6 +70,18 @@ implements FormContextUtilities<DataItem> {
         immutable: false,
         identityProperties: ["id"],
     };
+
+    constructor(props: ComponentProps<any>) {
+        super(props);
+
+        this.state = {
+            collectionSchema: {} as Yup.ArraySchema<DataItemType<OriginalData>>,
+            sourceData: {} as OriginalData,
+            dataGeneration: {} as {[key: number]: number},
+            validationErrors: {} as ValidationErrors<OriginalData>,
+            editedData: [] as DataItem[],    
+        }
+    }
 
     public static getDerivedStateFromProps(props: Props<any>, state: State<Props<any>>) {
 
