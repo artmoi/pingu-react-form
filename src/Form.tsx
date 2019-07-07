@@ -56,14 +56,7 @@ export class Form<
 extends React.PureComponent<PropsType, StateType>
 implements FormContextUtilities<DataItem> {
 
-    public readonly state: State<Props<any>> = {
-        collectionSchema: Form.castSchema({} as Yup.ArraySchema<DataItemType<OriginalData>>),
-        sourceData: {},
-        editedData: Form.castData([]),
-        dataGeneration: {},
-        // todo: Should I validate here?
-        validationErrors: Form.defaultValidationErrors({} as ValidationErrors<OriginalData>),
-    }
+    public readonly state: StateType = null;
 
     public static defaultProps: ComponentProps<any> = {
         useFormTag: false,

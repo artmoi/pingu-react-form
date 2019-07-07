@@ -28,6 +28,7 @@ interface State<PropsType extends Props<any>, OriginalData = GetOriginalData<Pro
     validationErrors: ValidationErrors<OriginalData>;
 }
 export declare class Form<OriginalData, PropsType extends Props<OriginalData> = Props<OriginalData>, StateType extends State<PropsType> = State<PropsType>, DataItem = DataItemType<OriginalData>> extends React.PureComponent<PropsType, StateType> implements FormContextUtilities<DataItem> {
+    readonly state: StateType;
     static defaultProps: ComponentProps<any>;
     static getDerivedStateFromProps(props: Props<any>, state: State<Props<any>>): {
         collectionSchema: Yup.ArraySchema<any>;
