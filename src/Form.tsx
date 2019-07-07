@@ -56,11 +56,12 @@ export class Form<
 extends React.PureComponent<PropsType, StateType>
 implements FormContextUtilities<DataItem> {
 
-    public readonly state: State<PropsType> = {
-        // collectionSchema: {},
-        // sourceData: null,
-        // dataGeneration: null,
-        // validationErrors: null
+    public readonly state: StateType = {
+        collectionSchema: {} as Yup.ArraySchema<DataItemType<OriginalData>>,
+        sourceData: {} as OriginalData,
+        dataGeneration: {} as {[key: number]: number},
+        validationErrors: {} as ValidationErrors<OriginalData>,
+        editedData: [] as DataItem[],
     }
 
     public static defaultProps: ComponentProps<any> = {
