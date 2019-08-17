@@ -1,9 +1,9 @@
 {
-  "name": "pingu-react-form",
+  "name": "@artmoi/pingu-react-form",
   "version": "0.0.9",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
-  "repository": "https://github.com/artmoi/pingu-react-form",
+  "repository": "git@github.com:artmoi/pingu-react-form.git",
   "author": "ArtMoi <moi@artmoi.com>",
   "license": "Apache-2.0",
   "private": false,
@@ -12,6 +12,9 @@
     "semantic-release": "semantic-release",
     "build": "tsc",
     "travis-deploy-once": "travis-deploy-once"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
     "@artmoi/artmoi-js": "^0.0.3",
